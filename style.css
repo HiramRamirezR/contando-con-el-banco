@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #989898;
+  border-radius: 10px;
+}
+
+#contenedor-imagenes {
+  display: flex-wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+#contenedor-botones {
+  display: flex-warp;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#boton-generar,
+#boton-adivinar {
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#boton-generar:hover,
+#boton-adivinar:hover {
+  background-color: #3e8e41;
+}
+
+#input-respuesta {
+  font-size: 18px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+
+#mensaje {
+  background-color: #989898;
+  font-size: 20px;
+  margin-top: 20px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+}
+
+img {
+  max-width: 100px;
+}
+/*# sourceMappingURL=style.css.map */
