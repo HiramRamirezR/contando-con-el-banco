@@ -76,4 +76,9 @@ h1 {
 img {
   max-width: 100px;
 }
+
+#ladybug {
+  max-width: 300px !important;
+  border-radius: 10px;
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,6 @@
 let numeroActual = 0;
 const contenedorImagenes = document.getElementById("contenedor-imagenes");
+let contador = 0;
 
 function generarNumeroAleatorio() {
   contenedorImagenes.innerHTML = "";
@@ -64,9 +65,11 @@ function verificarRespuesta() {
   const respuesta = parseInt(document.getElementById("input-respuesta").value);
 
   if (respuesta === numeroActual) {
-    document.getElementById("mensaje").textContent = "¡Correcto!";
+    contador++;
+    document.getElementById("mensaje").textContent = `¡Correcto! Aciertos: ${contador}`;
   } else {
-    document.getElementById("mensaje").textContent = "Intenta de nuevo.";
+    contador > 0 ? contador-- : contador = 0;
+    document.getElementById("mensaje").textContent = `Intenta de nuevo. Aciertos: ${contador}`;
   }
 }
 
