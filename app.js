@@ -1,8 +1,13 @@
 let numeroActual = 0;
 const contenedorImagenes = document.getElementById("contenedor-imagenes");
+const song = new Audio('/audio/song.mp3');
+const correct = new Audio('/audio/correct.wav');
+const error = new Audio('/audio/error.wav');
 let contador = 0;
 
 function generarNumeroAleatorio() {
+  song.play();
+  song.volume = .2;
   contenedorImagenes.innerHTML = "";
   let aleatorio = Math.floor(Math.random() * 9) + 1;
 
@@ -66,9 +71,11 @@ function verificarRespuesta() {
 
   if (respuesta === numeroActual) {
     contador++;
+    correct.play();
     document.getElementById("mensaje").textContent = `¡Correcto! Aciertos: ${contador}`;
   } else {
     contador > 0 ? contador-- : contador = 0;
+    error.play();
     document.getElementById("mensaje").textContent = `Intenta de nuevo. Aciertos: ${contador}`;
   }
 }
